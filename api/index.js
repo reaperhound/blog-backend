@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect('mongodb+srv://reaperhound:MinIsTheBestGirl@cluster0.4ndxvyl.mongodb.net/blog-new');
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
   try{
